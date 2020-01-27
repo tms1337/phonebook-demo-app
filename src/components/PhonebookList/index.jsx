@@ -1,7 +1,7 @@
 import React from "react";
 import PhonebookItem from "../PhonebookItem";
 
-const PhonebookList = ({ phonebook, filter }) => {
+const PhonebookList = ({ phonebook, filter = () => true }) => {
   const filteredPhoneBook = phonebook.filter(item => {
     return (
       item.name.includes(filter) ||

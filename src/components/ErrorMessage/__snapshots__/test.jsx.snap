@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage Snapshot renders 1`] = `
+<div
+  style={
+    Object {
+      "color": "#ff1f40",
+    }
+  }
+>
+  An error has occcured
+</div>
+`;
