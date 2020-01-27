@@ -1,7 +1,13 @@
 import React from "react";
 import { colors } from "../../ui";
+import * as merge from "deepmerge";
 
-const PhonebookItem = ({ item: { name, address, phone } }) => {
+const PhonebookItem = ({
+  item: { name, address, phone },
+  styles: propStyles = {}
+}) => {
+  const styles = merge(defaultStyles, propStyles);
+
   return (
     <div style={styles.root}>
       <div style={styles.title}>{name}</div>
@@ -11,7 +17,7 @@ const PhonebookItem = ({ item: { name, address, phone } }) => {
   );
 };
 
-const styles = {
+const defaultStyles = {
   root: {
     width: "750px",
     textAlign: "center",

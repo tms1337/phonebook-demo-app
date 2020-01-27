@@ -1,13 +1,16 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
+import * as merge from "deepmerge";
 
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Search from "@material-ui/icons/Search";
 
-const SearchBar = ({ setSearchQuery, styles: customStyles }) => {
+const SearchBar = ({ setSearchQuery, styles: propStyles = {} }) => {
+  const styles = merge(defaultStyles, propStyles);
+
   return (
     <TextField
-      style={{ ...styles.searchBox, ...customStyles }}
+      style={styles.searchBox}
       id="standard-basic"
       label="Enter your search..."
       InputProps={{
@@ -24,7 +27,7 @@ const SearchBar = ({ setSearchQuery, styles: customStyles }) => {
   );
 };
 
-const styles = {
+const defaultStyles = {
   searchBox: {
     width: "500px"
   }

@@ -1,12 +1,14 @@
 import React from "react";
+import * as merge from "deepmerge";
 
-const Header = ({ title, styles: customStyles }) => {
+const Header = ({ title, styles: propStyles = {} }) => {
+  const styles = merge(defaultStyles, propStyles);
+
   return (
     <div
       style={{
         ...styles.container,
-        ...styles.contentCentered,
-        ...customStyles
+        ...styles.contentCentered
       }}
     >
       <h1>{title}</h1>
@@ -14,7 +16,7 @@ const Header = ({ title, styles: customStyles }) => {
   );
 };
 
-const styles = {
+const defaultStyles = {
   container: {
     background: "black",
     height: "100px",

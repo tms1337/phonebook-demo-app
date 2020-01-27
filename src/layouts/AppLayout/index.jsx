@@ -6,7 +6,10 @@ const AppLayout = ({ children }) => {
   return (
     <div style={styles.root}>
       <div style={styles.header}>
-        <Header title="Phonebook" styles={styles.headerContent} />
+        <Header
+          title="Phonebook"
+          styles={{ container: styles.headerContent }}
+        />
       </div>
       <div style={styles.content}>{children}</div>
     </div>
