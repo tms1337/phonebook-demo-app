@@ -4,9 +4,9 @@ import PhonebookItem from "../PhonebookItem";
 const PhonebookList = ({ phonebook, filter = "" }) => {
   const filteredPhoneBook = phonebook.filter(item => {
     return (
-      item.name.includes(filter) ||
-      item.address.includes(filter) ||
-      item.phone.includes(filter)
+      item.name.toLowerCase().includes(filter.toLowerCase()) ||
+      item.address.toLowerCase().includes(filter.toLowerCase()) ||
+      item.phone.toLowerCase().includes(filter.toLowerCase())
     );
   });
 
