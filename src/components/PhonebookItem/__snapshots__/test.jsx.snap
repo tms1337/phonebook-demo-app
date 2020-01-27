@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PhonebookItem Snapshot renders 1`] = `
+exports[`PhonebookItem renders snapshot 1`] = `
 <div
   style={
     Object {
