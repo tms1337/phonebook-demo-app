@@ -11,3 +11,7 @@ yarn && ENV=development yarn start
 ```
 
 App should show up in your browser on port `3000`.
+
+<p align="center">
+  <img src="https://i.imgur.com/5MT2gNW.png" width="750" height="420" />
+</p>
